@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{A091E954-E951-25A4-8EFE-2BBCC76159B2}</ProjectGuid>
+    <ProjectGuid>{18908242-61AE-6882-BBAC-51E37D727F00}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -54,9 +54,14 @@
      <Compile Include="Assets\BiologyCellsPack\Demo\Scripts\BtnEvents.cs" />
      <Compile Include="Assets\BiologyCellsPack\Demo\Scripts\ChangeRenderQueue.cs" />
      <Compile Include="Assets\BiologyCellsPack\Demo\Scripts\MouseOrbitSample.cs" />
+     <Compile Include="Assets\Components\ATP.cs" />
+     <Compile Include="Assets\Components\Cell.cs" />
      <Compile Include="Assets\Components\Golgi.cs" />
-     <Compile Include="Assets\Components\MainMenu.cs" />
+     <Compile Include="Assets\Components\Play.cs" />
+     <Compile Include="Assets\Components\Sucre.cs" />
+     <Compile Include="Assets\Systemes\Atp_system.cs" />
      <Compile Include="Assets\Systemes\MainMenuSysteme.cs" />
+     <Compile Include="Assets\Systemes\SucreSysteme.cs" />
      <None Include="Assets\Librairies\FYFY.xml.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
@@ -80,10 +85,10 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
  </Reference>
  <Reference Include="FYFY">
- <HintPath>C:/Users/Souad/Documents/ISG/Cell_City/Assets/Librairies/FYFY.dll</HintPath>
+ <HintPath>C:/Users/Souad/Documents/ISG/cellcity/Assets/Librairies/FYFY.dll</HintPath>
  </Reference>
  <Reference Include="FYFY_Inspector">
- <HintPath>C:/Users/Souad/Documents/ISG/Cell_City/Assets/Librairies/FYFY_Inspector.dll</HintPath>
+ <HintPath>C:/Users/Souad/Documents/ISG/cellcity/Assets/Librairies/FYFY_Inspector.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
