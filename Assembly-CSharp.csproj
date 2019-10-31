@@ -56,13 +56,18 @@
      <Compile Include="Assets\BiologyCellsPack\Demo\Scripts\MouseOrbitSample.cs" />
      <Compile Include="Assets\Components\ATP.cs" />
      <Compile Include="Assets\Components\Cell.cs" />
+     <Compile Include="Assets\Components\Factory_sugar.cs" />
      <Compile Include="Assets\Components\Golgi.cs" />
      <Compile Include="Assets\Components\Play.cs" />
      <Compile Include="Assets\Components\Sucre.cs" />
      <Compile Include="Assets\Systemes\Atp_system.cs" />
      <Compile Include="Assets\Systemes\MainMenuSysteme.cs" />
      <Compile Include="Assets\Systemes\SucreSysteme.cs" />
+     <Compile Include="Assets\Systemes\SugarFactory.cs" />
+     <None Include="Assets\Librairies\FYFY.xml" />
+     <None Include="Assets\Librairies\FYFY_Inspector.xml" />
      <None Include="Assets\Librairies\FYFY.xml.xml" />
+     <None Include="Assets\Librairies\TriggerManager.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -89,6 +94,9 @@
  </Reference>
  <Reference Include="FYFY_Inspector">
  <HintPath>C:/Users/Souad/Documents/ISG/cellcity/Assets/Librairies/FYFY_Inspector.dll</HintPath>
+ </Reference>
+ <Reference Include="TriggerManager">
+ <HintPath>C:/Users/Souad/Documents/ISG/cellcity/Assets/Librairies/TriggerManager.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,9 +1,14 @@
 ﻿using UnityEngine;
 using FYFY;
+using FYFY_plugins.TriggerManager;
 
 public class SucreSysteme : FSystem {
-	private float speed = 100f;
+	
 	private Family _sucre = FamilyManager.getFamily(new AllOfComponents(typeof(Sucre)));
+	//Pour traiter les intéractions 
+	private Family _triggered = FamilyManager.getFamily(new AllOfComponents(typeof(Triggered3D)));
+
+
 	// Use this to update member variables when system pause. 
 	// Advice: avoid to update your families inside this function.
 	public SucreSysteme(){
@@ -17,11 +22,10 @@ public class SucreSysteme : FSystem {
 
 	private void onGOEnter(GameObject sucre){
 		GameObject cell = GameObject.Find ("PlasmaMembrane");
-		Transform tr = sucre.GetComponent<Transform> ();
 		Sucre rt = sucre.GetComponent<Sucre> ();
 
 		Renderer rend = cell.GetComponent<Renderer> ();
-		Vector3 target = new Vector3 ((rend.bounds.min.x + rend.bounds.max.x) / 2.0f,rend.bounds.max.y, rend.bounds.min.z);
+		Vector3 target = new Vector3 ((rend.bounds.min.x + rend.bounds.max.x) / 2.0f+Random.value*10,rend.bounds.max.y+Random.value*10, rend.bounds.min.z+Random.value*10);
 		rt.target = target;
 	}
 
@@ -33,9 +37,24 @@ public class SucreSysteme : FSystem {
 			Transform tr = sucre.GetComponent<Transform> ();
 			Sucre rt = sucre.GetComponent<Sucre> ();
 			if (rt.target.Equals (tr.position) == false) {
-				tr.position = Vector3.MoveTowards (tr.position,rt.target, speed * Time.deltaTime);
+				tr.position = Vector3.MoveTowards (tr.position,rt.target, rt.speed * Time.deltaTime);
 			}
-
 		}
+		GameObject background = GameObject.Find ("background");
+		foreach (GameObject go in _triggered) {
+			Triggered3D t3d = go.GetComponent<Triggered3D> ();
+
+			foreach (GameObject target in t3d.Targets) {
+				if (target.Equals (background) == false) {
+					
+					//Transform tr = target.GetComponent<Transform> ();
+					//Vector3 tar = new Vector3 ((Random.value) * 800, (Random.value) * 800);
+
+					//tr.position = Vector3.MoveTowards (tr.position, tar, 100f * Time.deltaTime);
+					//Debug.Log ("eurler angles "+tr.eulerAngles);
+				}
+			}
+		}
+
 	}
 }
