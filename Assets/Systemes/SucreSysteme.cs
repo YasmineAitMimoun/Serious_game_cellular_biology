@@ -36,8 +36,12 @@ public class SucreSysteme : FSystem {
 		foreach (GameObject sucre in _sucre) {
 			Transform tr = sucre.GetComponent<Transform> ();
 			Sucre rt = sucre.GetComponent<Sucre> ();
-			if (rt.target.Equals (tr.position) == false) {
-				tr.position = Vector3.MoveTowards (tr.position,rt.target, rt.speed * Time.deltaTime);
+			if (rt.target.Equals (tr.position) == false && tr.name != "Sucre") {
+				tr.position = Vector3.MoveTowards (tr.position, rt.target, rt.speed * Time.deltaTime);
+			} else {
+				if (rt.target.Equals (tr.position)) {
+					rt.arrive = true;
+				}
 			}
 		}
 		GameObject background = GameObject.Find ("background");

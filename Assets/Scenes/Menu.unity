@@ -196,17 +196,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 11500000, guid: bce7ce3195657054ba1fdd8c01fa361a, type: 3}
-        m_MethodName: 
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &76888779
@@ -253,6 +242,77 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03fa8b22f3a3688459a92cd6f9bd2471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &109271155
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 109271158}
+  - component: {fileID: 109271157}
+  - component: {fileID: 109271156}
+  m_Layer: 0
+  m_Name: Main_Loop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!114 &109271156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 109271155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -369626636, guid: 515c28fec39343e44af1d40a36939570, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &109271157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 109271155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1260832056, guid: 4ad419cffaee75b4db496f43b196a0a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fixedUpdateSystemDescriptions: []
+  _updateSystemDescriptions:
+  - _typeAssemblyQualifiedName: MainMenuSysteme, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    _typeFullName: MainMenuSysteme
+    _pause: 0
+  _lateUpdateSystemDescriptions: []
+  _forceUpdateInspector: 0
+  _loadingState: 0
+  _specialGameObjects:
+  - {fileID: 0}
+  showSystemProfiler: 1
+  showFamilyInspector: 0
+  showFamilyInspectorFixedUpdate: 0
+  showFamilyInspectorUpdate: 0
+  showFamilyInspectorLateUpdate: 0
+  fixedUpdateStats: 0
+  updateStats: 0
+  lateUpdateStats: 0
+--- !u!4 &109271158
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 109271155}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &308261098
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,78 +525,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1530078124
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1530078127}
-  - component: {fileID: 1530078126}
-  - component: {fileID: 1530078125}
-  m_Layer: 0
-  m_Name: Main_Loop
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!114 &1530078125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1530078124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -369626636, guid: 515c28fec39343e44af1d40a36939570, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1530078126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1530078124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1260832056, guid: 4ad419cffaee75b4db496f43b196a0a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _fixedUpdateSystemDescriptions: []
-  _updateSystemDescriptions:
-  - _typeAssemblyQualifiedName: MainMenuSysteme, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-    _typeFullName: MainMenuSysteme
-    _pause: 0
-  _lateUpdateSystemDescriptions: []
-  _forceUpdateInspector: 0
-  _loadingState: 1
-  _specialGameObjects:
-  - {fileID: 0}
-  - {fileID: 76888776}
-  showSystemProfiler: 1
-  showFamilyInspector: 0
-  showFamilyInspectorFixedUpdate: 0
-  showFamilyInspectorUpdate: 0
-  showFamilyInspectorLateUpdate: 0
-  fixedUpdateStats: 0
-  updateStats: 0
-  lateUpdateStats: 0
---- !u!4 &1530078127
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1530078124}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1607601921
 GameObject:
@@ -934,7 +922,7 @@ RectTransform:
   - {fileID: 308261099}
   - {fileID: 1685789258}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

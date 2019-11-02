@@ -58,10 +58,15 @@
      <Compile Include="Assets\Components\Cell.cs" />
      <Compile Include="Assets\Components\Factory_sugar.cs" />
      <Compile Include="Assets\Components\Golgi.cs" />
+     <Compile Include="Assets\Components\Inventory.cs" />
      <Compile Include="Assets\Components\Play.cs" />
+     <Compile Include="Assets\Components\Ribosome.cs" />
+     <Compile Include="Assets\Components\Score_sucre.cs" />
      <Compile Include="Assets\Components\Sucre.cs" />
      <Compile Include="Assets\Systemes\Atp_system.cs" />
+     <Compile Include="Assets\Systemes\InventorySystem.cs" />
      <Compile Include="Assets\Systemes\MainMenuSysteme.cs" />
+     <Compile Include="Assets\Systemes\RibosomeSysteme.cs" />
      <Compile Include="Assets\Systemes\SucreSysteme.cs" />
      <Compile Include="Assets\Systemes\SugarFactory.cs" />
      <None Include="Assets\Librairies\FYFY.xml" />
