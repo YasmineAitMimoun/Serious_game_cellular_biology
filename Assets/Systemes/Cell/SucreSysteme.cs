@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using FYFY;
 using FYFY_plugins.TriggerManager;
+using System.Collections;
 
 public class SucreSysteme : FSystem {
 	
+	private Family _scoreSucre= FamilyManager.getFamily(new AllOfComponents(typeof(Score_sucre)));
 	private Family _sucre = FamilyManager.getFamily(new AllOfComponents(typeof(Sucre)));
 	//Pour traiter les intéractions 
-	private Family _triggered = FamilyManager.getFamily(new AllOfComponents(typeof(Triggered3D)));
+	private Family _ATP = FamilyManager.getFamily(new AllOfComponents(typeof(ATP)));
 
 
 	// Use this to update member variables when system pause. 
@@ -44,21 +46,39 @@ public class SucreSysteme : FSystem {
 				}
 			}
 		}
-		GameObject background = GameObject.Find ("background");
-		foreach (GameObject go in _triggered) {
-			Triggered3D t3d = go.GetComponent<Triggered3D> ();
+		foreach (GameObject sucre in _sucre){
+			Sucre rt = sucre.GetComponent<Sucre> ();
+			rt.pressed = false;
+			if (Input.GetMouseButtonDown (0) ) {
+				Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
+				RaycastHit hit;
+				if (Physics.Raycast (ray, out hit)) {
+					if (hit.transform.GetInstanceID() == sucre.transform.GetInstanceID()) {
+						rt.pressed = true;
+					}
+				}
 
-			foreach (GameObject target in t3d.Targets) {
-				if (target.Equals (background) == false) {
-					
-					//Transform tr = target.GetComponent<Transform> ();
-					//Vector3 tar = new Vector3 ((Random.value) * 800, (Random.value) * 800);
-
-					//tr.position = Vector3.MoveTowards (tr.position, tar, 100f * Time.deltaTime);
-					//Debug.Log ("eurler angles "+tr.eulerAngles);
+			}
+			GameObject atp = _ATP.getAt (1);
+			if(rt.pressed == true)	{
+				ATP atp1 = atp.GetComponent<ATP> ();
+				if (atp1.score < 1) {
+					Debug.Log ("Pas assez d'énergie pour effectuer cette action "); 
+				} else {
+					if (rt.arrive == false) {
+						Debug.Log ("Le sucre n'est pas sur la membrane");
+					} else { 
+						_scoreSucre.First ().GetComponent<Score_sucre> ().score = _scoreSucre.First ().GetComponent<Score_sucre> ().score + 1;
+						_scoreSucre.First ().GetComponent<Score_sucre> ().update = true;
+						atp1.score = atp1.score - 1;
+						Debug.Log (sucre.name);
+						GameObjectManager.unbind (sucre);
+						UnityEngine.Object.Destroy (sucre);
+					}
 				}
 			}
 		}
+
 
 	}
 }

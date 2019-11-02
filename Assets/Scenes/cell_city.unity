@@ -1740,19 +1740,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 43c954e07e166a549a8422eb948fe8cb, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.020792931
+      value: 0.020792933
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 43c954e07e166a549a8422eb948fe8cb, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.6589566
+      value: -0.65895665
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 43c954e07e166a549a8422eb948fe8cb, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0033677667
+      value: -0.003367767
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 43c954e07e166a549a8422eb948fe8cb, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7518859
+      value: 0.75188595
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 43c954e07e166a549a8422eb948fe8cb, type: 3}
       propertyPath: m_RootOrder
@@ -4549,11 +4549,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ea7eda82e779734da3e77d095f2ec1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {x: 0, y: 0, z: 0}
-  sucre_list: []
-  depart: 0
-  arrivesucre: 0
-  arrivegolgi: 0
 --- !u!65 &847619900
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7579,10 +7574,6 @@ MonoBehaviour:
       PublicKeyToken=null
     _typeFullName: SugarFactory
     _pause: 0
-  - _typeAssemblyQualifiedName: RibosomeSysteme, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-    _typeFullName: RibosomeSysteme
-    _pause: 0
   - _typeAssemblyQualifiedName: InventorySystem, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     _typeFullName: InventorySystem
@@ -7590,6 +7581,14 @@ MonoBehaviour:
   - _typeAssemblyQualifiedName: UpdateScoreSystem, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     _typeFullName: UpdateScoreSystem
+    _pause: 0
+  - _typeAssemblyQualifiedName: mitochondrioncellSystem, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    _typeFullName: mitochondrioncellSystem
+    _pause: 0
+  - _typeAssemblyQualifiedName: RibosomeSystemecell, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    _typeFullName: RibosomeSystemecell
     _pause: 0
   _lateUpdateSystemDescriptions: []
   _forceUpdateInspector: 0
@@ -7748,7 +7747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d838092d0637004ab0c12112697a862, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reloadTime: 2
+  reloadTime: 4
   reloadProgress: 0
   prefab: {fileID: 1208147359}
 --- !u!54 &1603252442
@@ -8465,7 +8464,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1723789623}
-  m_LocalRotation: {x: -0.55707365, y: -0.50548494, z: 0.65403324, w: -0.07996609}
+  m_LocalRotation: {x: -0.5570736, y: -0.5054849, z: 0.6540332, w: -0.07996608}
   m_LocalPosition: {x: -0.045378644, y: 0.056593303, z: 0.1964877}
   m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.9999999}
   m_Children: []
@@ -8593,6 +8592,34 @@ Transform:
   m_Father: {fileID: 776855}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1744447749 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 43c954e07e166a549a8422eb948fe8cb, type: 3}
+  m_PrefabInternal: {fileID: 358086786}
+--- !u!114 &1744447750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1744447749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bbb0b2dc25b9a8468f2c9ff5839380f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!136 &1744447751
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1744447749}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.038518086
+  m_Height: 0.17644045
+  m_Direction: 2
+  m_Center: {x: 4.209685e-12, y: -0.0011830209, z: -6.0488073e-13}
 --- !u!1 &1763617004
 GameObject:
   m_ObjectHideFlags: 0
