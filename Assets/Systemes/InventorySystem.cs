@@ -18,11 +18,12 @@ public class InventorySystem : FSystem {
 	protected override void onProcess(int familiesUpdateCount) {
 		foreach (GameObject inv in Inventory) {
 			Inventory inventory = inv.GetComponent<Inventory> ();
-			if(Input.GetKey(KeyCode.A)){
-				inventory.activation = ! inventory.activation;
+			if (Input.GetKey (KeyCode.I) && Time.time-inventory.pressed_time > 0.5f) {
+				inventory.activation = !inventory.activation;
 				GameObject Invent = GameObject.Find ("Inventaire");
 				Invent.GetComponent<Canvas> ().enabled = inventory.activation;
-			}
+				inventory.pressed_time = Time.time;
+			} 
 		}
 	}
 }

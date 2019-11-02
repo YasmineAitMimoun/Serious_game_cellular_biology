@@ -50,7 +50,9 @@ public class RibosomeSysteme : FSystem {
 										GameObjectManager.unbind (sug);
 										UnityEngine.Object.Destroy (sug);
 										_scoreSucre.First ().GetComponent<Score_sucre> ().score = _scoreSucre.First ().GetComponent<Score_sucre> ().score + 1;
+										_scoreSucre.First ().GetComponent<Score_sucre> ().update = true;
 										sug = _Sucre.getAt (1);
+										rib.depart = false;
 										Debug.Log (sugar.transform.name);
 									}
 								} 
