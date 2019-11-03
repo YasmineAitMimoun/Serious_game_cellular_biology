@@ -17,3 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ribosome.unity
     guid: 43bf323e8f5150549a2f7ec364cb2cd9
+  - enabled: 1
+    path: Assets/Scenes/Golgi.unity
+    guid: 5ef3167bb67de944ea6128f30b18d21d

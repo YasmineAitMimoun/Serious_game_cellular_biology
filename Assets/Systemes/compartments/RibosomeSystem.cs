@@ -18,7 +18,7 @@ public class RibosomeSystem : FSystem {
 	protected override void onProcess(int familiesUpdateCount) {
 		foreach (GameObject go in _ribosome) {
 			ribosome mito = go.GetComponent<ribosome> ();
-			mito.transform.Rotate (new Vector3 (0f, 50f, 0f) * Time.deltaTime);
+			mito.transform.Rotate (new Vector3 (0f, -50f, 0f) * Time.deltaTime);
 		}
 		if (Input.GetKey (KeyCode.Q)) {
 			GameObjectManager.loadScene ("cell_city");

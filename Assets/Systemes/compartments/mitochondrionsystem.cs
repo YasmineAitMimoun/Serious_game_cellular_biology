@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using FYFY;
+using UnityEngine.SceneManagement;
 
 public class mitochondrionsystem : FSystem {
 	private Family _mitochondrion = FamilyManager.getFamily(new AllOfComponents(typeof(mitochondrion)));
@@ -20,7 +21,9 @@ public class mitochondrionsystem : FSystem {
 			mito.transform.Rotate (new Vector3 (0f, 0f, 50f) * Time.deltaTime);
 		}
 		if (Input.GetKey (KeyCode.Q)) {
-			GameObjectManager.loadScene ("cell_city");
+			SceneManager.LoadScene("cell_city");
+
+			//GameObjectManager.loadScene ("cell_city");
 		} 
 	}
 }

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using FYFY;
 
-public class SugarFactory : FSystem {
+public class SugarFactorycell : FSystem {
 	private Family factory_F = FamilyManager.getFamily(new AllOfComponents(typeof(Factory_sugar)));
 	// Use this to update member variables when system pause. 
 	// Advice: avoid to update your families inside this function.

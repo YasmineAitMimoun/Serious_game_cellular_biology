@@ -16,14 +16,12 @@ public class UpdateScoreSystem : FSystem {
 
 	// Use to process your families.
 	protected override void onProcess(int familiesUpdateCount) {
-		foreach (GameObject go in _score_sucre) {
-			Score_sucre score = go.GetComponent<Score_sucre> ();
-			if (score.update == true) {
+			if (Score_sucre.update == true) {
 				if (GameObject.Find ("scoresucre").GetComponent<Text> () == null)
 					Debug.Log ("objet non trouvé");
-				GameObject.Find ("scoresucre").GetComponent<Text> ().text = "Sugar: "+ score.score ;
-				score.update = false;
+				GameObject.Find ("scoresucre").GetComponent<Text> ().text = "Glucose: "+ Score_sucre.score ;
+				Score_sucre.update = false;
 			}
-		}
+
 	}
 }

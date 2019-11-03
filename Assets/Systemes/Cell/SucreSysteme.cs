@@ -2,13 +2,12 @@
 using FYFY;
 using FYFY_plugins.TriggerManager;
 using System.Collections;
+using UnityEngine.UI;
 
 public class SucreSysteme : FSystem {
 	
-	private Family _scoreSucre= FamilyManager.getFamily(new AllOfComponents(typeof(Score_sucre)));
 	private Family _sucre = FamilyManager.getFamily(new AllOfComponents(typeof(Sucre)));
 	//Pour traiter les intéractions 
-	private Family _ATP = FamilyManager.getFamily(new AllOfComponents(typeof(ATP)));
 
 
 	// Use this to update member variables when system pause. 
@@ -27,7 +26,7 @@ public class SucreSysteme : FSystem {
 		Sucre rt = sucre.GetComponent<Sucre> ();
 
 		Renderer rend = cell.GetComponent<Renderer> ();
-		Vector3 target = new Vector3 ((rend.bounds.min.x + rend.bounds.max.x) / 2.0f+Random.value*10,rend.bounds.max.y+Random.value*10, rend.bounds.min.z+Random.value*10);
+		Vector3 target = new Vector3 (((rend.bounds.min.x + rend.bounds.max.x) / 2.0f)+Random.value*10,rend.bounds.max.y-10f+Random.value*10, rend.bounds.min.z+Random.value*10);
 		rt.target = target;
 	}
 
@@ -59,18 +58,17 @@ public class SucreSysteme : FSystem {
 				}
 
 			}
-			GameObject atp = _ATP.getAt (1);
 			if(rt.pressed == true)	{
-				ATP atp1 = atp.GetComponent<ATP> ();
-				if (atp1.score < 1) {
-					Debug.Log ("Pas assez d'énergie pour effectuer cette action "); 
+				if (ATP.score < 1) {
+					GameObject.Find ("textmessage").GetComponent<Text> ().text = "Pas assez d'énergie pour effectuer cette action";
+					Debug.Log ("Pas assez d'énergie pour effectuer cette action"); 
 				} else {
 					if (rt.arrive == false) {
-						Debug.Log ("Le sucre n'est pas sur la membrane");
+						Debug.Log ("Le glucose n'est pas sur la membrane");
 					} else { 
-						_scoreSucre.First ().GetComponent<Score_sucre> ().score = _scoreSucre.First ().GetComponent<Score_sucre> ().score + 1;
-						_scoreSucre.First ().GetComponent<Score_sucre> ().update = true;
-						atp1.score = atp1.score - 1;
+						Score_sucre.score =Score_sucre.score + 1;
+						Score_sucre.update = true;
+						ATP.score = ATP.score - 1;
 						Debug.Log (sucre.name);
 						GameObjectManager.unbind (sucre);
 						UnityEngine.Object.Destroy (sucre);
