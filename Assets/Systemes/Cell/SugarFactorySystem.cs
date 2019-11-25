@@ -17,6 +17,7 @@ public class SugarFactorycell : FSystem {
 					GameObject go = Object.Instantiate<GameObject> (factory.prefab);
 					GameObjectManager.bind (go);
 					go.transform.position = new Vector3 ((Random.value * 250) + 500, (Random.value * 100) + 450);
+					Debug.Log (go.transform.position);
 					factory.reloadProgress = 0;
 				}
 

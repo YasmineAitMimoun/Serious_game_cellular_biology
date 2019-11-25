@@ -51,6 +51,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AutomaticScript\Atp_system_wrapper.cs" />
+     <Compile Include="Assets\AutomaticScript\GolgicellSystem_wrapper.cs" />
+     <Compile Include="Assets\AutomaticScript\InventorySystem_wrapper.cs" />
+     <Compile Include="Assets\AutomaticScript\mitochondrioncellSystem_wrapper.cs" />
+     <Compile Include="Assets\AutomaticScript\OxygeneFactorySystem_wrapper.cs" />
+     <Compile Include="Assets\AutomaticScript\OxygeneSystem_wrapper.cs" />
+     <Compile Include="Assets\AutomaticScript\RibosomeSystemecell_wrapper.cs" />
+     <Compile Include="Assets\AutomaticScript\SucreSysteme_wrapper.cs" />
+     <Compile Include="Assets\AutomaticScript\SugarFactorycell_wrapper.cs" />
+     <Compile Include="Assets\AutomaticScript\UpdateOxygeneSystem_wrapper.cs" />
+     <Compile Include="Assets\AutomaticScript\UpdateScoreSystem_wrapper.cs" />
      <Compile Include="Assets\BiologyCellsPack\Demo\Scripts\BtnEvents.cs" />
      <Compile Include="Assets\BiologyCellsPack\Demo\Scripts\ChangeRenderQueue.cs" />
      <Compile Include="Assets\BiologyCellsPack\Demo\Scripts\MouseOrbitSample.cs" />
@@ -95,7 +106,9 @@
      <None Include="Assets\Librairies\FYFY.xml" />
      <None Include="Assets\Librairies\FYFY_Inspector.xml" />
      <None Include="Assets\Librairies\FYFY.xml.xml" />
+     <None Include="Assets\Librairies\CollisionManager.xml" />
      <None Include="Assets\Librairies\TriggerManager.xml" />
+     <None Include="Assets\Librairies\PointerManager.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -117,11 +130,17 @@
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
  </Reference>
+ <Reference Include="CollisionManager">
+ <HintPath>C:/Users/Souad/Documents/ISG/cellcity/Assets/Librairies/CollisionManager.dll</HintPath>
+ </Reference>
  <Reference Include="FYFY">
  <HintPath>C:/Users/Souad/Documents/ISG/cellcity/Assets/Librairies/FYFY.dll</HintPath>
  </Reference>
  <Reference Include="FYFY_Inspector">
  <HintPath>C:/Users/Souad/Documents/ISG/cellcity/Assets/Librairies/FYFY_Inspector.dll</HintPath>
+ </Reference>
+ <Reference Include="PointerManager">
+ <HintPath>C:/Users/Souad/Documents/ISG/cellcity/Assets/Librairies/PointerManager.dll</HintPath>
  </Reference>
  <Reference Include="TriggerManager">
  <HintPath>C:/Users/Souad/Documents/ISG/cellcity/Assets/Librairies/TriggerManager.dll</HintPath>

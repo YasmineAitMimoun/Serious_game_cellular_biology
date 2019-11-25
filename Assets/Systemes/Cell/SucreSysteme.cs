@@ -26,7 +26,13 @@ public class SucreSysteme : FSystem {
 		Sucre rt = sucre.GetComponent<Sucre> ();
 
 		Renderer rend = cell.GetComponent<Renderer> ();
-		Vector3 target = new Vector3 (((rend.bounds.min.x + rend.bounds.max.x) / 2.0f)+Random.value*10,rend.bounds.max.y-10f+Random.value*10, rend.bounds.min.z+Random.value*10);
+		Collider2D col = cell.GetComponent<Collider2D> ();
+		Debug.Log (rend.bounds.center);
+		float rayon = rend.bounds.max.y - rend.bounds.min.y;
+		//Debug.Log (rayon);
+		Vector3 target = col.bounds.ClosestPoint (new Vector3 ((Random.value * 250) + 500, (Random.value * 100) + 450));
+		Debug.Log ("target: "+target);
+		//Vector3 target = new Vector3 (((rend.bounds.min.x + rend.bounds.max.x) / 2.0f)+Random.value*10,rend.bounds.min.y+10f+Random.value*10, rend.bounds.min.z+Random.value*10);
 		rt.target = target;
 	}
 
@@ -60,7 +66,7 @@ public class SucreSysteme : FSystem {
 			}
 			if(rt.pressed == true)	{
 				if (ATP.score < 1) {
-					GameObject.Find ("textmessage").GetComponent<Text> ().text = "Pas assez d'énergie pour effectuer cette action";
+					//GameObject.Find ("textmessage").GetComponent<Text> ().text = "Pas assez d'énergie pour effectuer cette action";
 					Debug.Log ("Pas assez d'énergie pour effectuer cette action"); 
 				} else {
 					if (rt.arrive == false) {
