@@ -14,6 +14,11 @@ public class RibosomeSystem : FSystem {
 	protected override void onResume(int currentFrame){
 	}
 
+	public void cell_city(){
+		save_load.switchh = true;
+		GameObjectManager.loadScene ("cell_city");
+	}
+
 	// Use to process your families.
 	protected override void onProcess(int familiesUpdateCount) {
 		foreach (GameObject go in _ribosome) {

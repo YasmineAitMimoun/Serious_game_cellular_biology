@@ -14,4 +14,9 @@ public class mitochondrioncellSystem_wrapper : MonoBehaviour
 		MainLoop.callAppropriateSystemMethod ("mitochondrioncellSystem", "click", null);
 	}
 
+	public void generATP()
+	{
+		MainLoop.callAppropriateSystemMethod ("mitochondrioncellSystem", "generATP", null);
+	}
+
 }

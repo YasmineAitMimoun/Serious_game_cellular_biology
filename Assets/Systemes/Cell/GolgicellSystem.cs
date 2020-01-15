@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 using FYFY;
+using FYFY_plugins.PointerManager;
 
 public class GolgicellSystem : FSystem {
-	private Family _Golgi = FamilyManager.getFamily(new AllOfComponents(typeof(Golgicell)));
+	private Family _Golgi_pointer = FamilyManager.getFamily(new AllOfComponents(typeof(Golgicell),typeof(PointerOver)));
+	private Family _sucre = FamilyManager.getFamily(new AllOfComponents(typeof(Sucre)));
 
 	// Use this to update member variables when system pause. 
 	// Advice: avoid to update your families inside this function.
@@ -16,16 +18,15 @@ public class GolgicellSystem : FSystem {
 
 	// Use to process your families.
 	protected override void onProcess(int familiesUpdateCount) {
-		foreach (GameObject go in _Golgi) {
+		if (_Golgi_pointer.First () != null) {
+			
 			if (Input.GetMouseButtonDown (0)) {
-				Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
-				RaycastHit hit;
-				if (Physics.Raycast (ray, out hit)) {
-					if (hit.transform.GetInstanceID() == go.transform.GetInstanceID()) {
-						GameObjectManager.loadScene ("Golgi");
-					}
-				}
+				Save_load.save (_sucre);
+				save_load.switchh = false;
+				GameObjectManager.loadScene ("Golgi");
+
 			}
 		}
+
 	}
 }

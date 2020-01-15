@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using FYFY;
+using UnityEngine.UI;
 
 public class OxygeneFactorySystem : FSystem {
 	private Family factory_F = FamilyManager.getFamily(new AllOfComponents(typeof(Factory_oxygene)));
@@ -8,19 +9,24 @@ public class OxygeneFactorySystem : FSystem {
 
 	// Use to process your families.
 	protected override void onProcess(int familiesUpdateCount) {
-		GameObject sugarFactory = factory_F.First ();
-		if (sugarFactory != null) {
-			Factory_oxygene factory = sugarFactory.GetComponent<Factory_oxygene> ();
-			if (factory != null) {
-				factory.reloadProgress += Time.deltaTime;
-				if (factory.reloadProgress >= factory.reloadTime) {
-					GameObject go = Object.Instantiate<GameObject> (factory.prefab);
-					GameObjectManager.bind (go);
-					go.transform.position = new Vector3 ((Random.value * 250) + 500, (Random.value * 100) + 450);
-					factory.reloadProgress = 0;
-				}
+		
+			GameObject sugarFactory = factory_F.First ();
+			if (sugarFactory != null) {
+				Factory_oxygene factory = sugarFactory.GetComponent<Factory_oxygene> ();
+				if (factory != null) {
+					factory.reloadProgress += Time.deltaTime;
+					if (factory.reloadProgress >= factory.reloadTime) {
+						//GameObject go = Object.Instantiate<GameObject> (factory.prefab);
+						//GameObjectManager.bind (go);
+						score_oxygene.score += 1;
+						GameObject.Find ("ScoreOxygene").GetComponent<Text> ().text = "Oxygene: " + score_oxygene.score;
+						score_oxygene.update = true;
+						//go.transform.position = new Vector3 ((Random.value * 250) + 500, (Random.value * 100) + 450);
+						factory.reloadProgress = 0;
+					}
 
+				}
 			}
-		}
+
 	}
 }

@@ -14,6 +14,10 @@ public class RectiliumSystem : FSystem {
 	protected override void onResume(int currentFrame){
 	}
 
+	public void cell_city(){
+		save_load.switchh = true;
+		GameObjectManager.loadScene ("cell_city");
+	}
 	// Use to process your families.
 	protected override void onProcess(int familiesUpdateCount) {
 		foreach (GameObject go in _Rectilium) {
@@ -21,6 +25,7 @@ public class RectiliumSystem : FSystem {
 			mito.transform.Rotate (new Vector3 (0f, 0f, 50f) * Time.deltaTime);
 		}
 		if (Input.GetKey (KeyCode.Q)) {
+			save_load.switchh = true;
 			GameObjectManager.loadScene ("cell_city");
 		} 
 	}

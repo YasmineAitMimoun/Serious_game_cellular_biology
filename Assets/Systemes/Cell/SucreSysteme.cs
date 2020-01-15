@@ -25,15 +25,17 @@ public class SucreSysteme : FSystem {
 		GameObject cell = GameObject.Find ("PlasmaMembrane");
 		Sucre rt = sucre.GetComponent<Sucre> ();
 
-		Renderer rend = cell.GetComponent<Renderer> ();
-		Collider2D col = cell.GetComponent<Collider2D> ();
-		Debug.Log (rend.bounds.center);
-		float rayon = rend.bounds.max.y - rend.bounds.min.y;
-		//Debug.Log (rayon);
-		Vector3 target = col.bounds.ClosestPoint (new Vector3 ((Random.value * 250) + 500, (Random.value * 100) + 450));
-		Debug.Log ("target: "+target);
-		//Vector3 target = new Vector3 (((rend.bounds.min.x + rend.bounds.max.x) / 2.0f)+Random.value*10,rend.bounds.min.y+10f+Random.value*10, rend.bounds.min.z+Random.value*10);
-		rt.target = target;
+		GameObject.Find ("scoresucre").GetComponent<Text> ().text = "Glucose: "+ Score_sucre.score ;		
+		Collider col = cell.GetComponent<Collider> ();
+		if (sucre.GetComponent<Sucre> ().arrive == false) {
+			Vector3 tar = col.ClosestPoint (sucre.GetComponent<Transform> ().position);
+			Vector3 target = new Vector3 (tar.x, tar.y, -100f);
+			rt.target = target;
+		} else {
+			Vector3 target = sucre.GetComponent<Transform> ().position;
+			rt.target = target;
+		}
+	
 	}
 
 
@@ -43,13 +45,11 @@ public class SucreSysteme : FSystem {
 		foreach (GameObject sucre in _sucre) {
 			Transform tr = sucre.GetComponent<Transform> ();
 			Sucre rt = sucre.GetComponent<Sucre> ();
-			if (rt.target.Equals (tr.position) == false && tr.name != "Sucre") {
+			if (rt.arrive == false && tr.name != "Sucre") {
 				tr.position = Vector3.MoveTowards (tr.position, rt.target, rt.speed * Time.deltaTime);
-			} else {
-				if (rt.target.Equals (tr.position)) {
+				if (rt.target.Equals (tr.position)) 
 					rt.arrive = true;
-				}
-			}
+			} 
 		}
 		foreach (GameObject sucre in _sucre){
 			Sucre rt = sucre.GetComponent<Sucre> ();
@@ -72,10 +72,11 @@ public class SucreSysteme : FSystem {
 					if (rt.arrive == false) {
 						Debug.Log ("Le glucose n'est pas sur la membrane");
 					} else { 
+						score_dechets.score += 1;
+						score_dechets.update = true;
 						Score_sucre.score =Score_sucre.score + 1;
 						Score_sucre.update = true;
 						ATP.score = ATP.score - 1;
-						Debug.Log (sucre.name);
 						GameObjectManager.unbind (sucre);
 						UnityEngine.Object.Destroy (sucre);
 					}
@@ -86,3 +87,4 @@ public class SucreSysteme : FSystem {
 
 	}
 }
+	

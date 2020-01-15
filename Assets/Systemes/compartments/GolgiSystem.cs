@@ -14,6 +14,12 @@ public class GolgiSystem : FSystem {
 	protected override void onResume(int currentFrame){
 	}
 
+
+	public void cell_city(){
+		save_load.switchh = true;
+		GameObjectManager.loadScene ("cell_city");
+	}
+
 	// Use to process your families.
 	protected override void onProcess(int familiesUpdateCount) {
 		foreach (GameObject go in _Golgi) {
@@ -22,7 +28,7 @@ public class GolgiSystem : FSystem {
 		}
 
 		if (Input.GetKey (KeyCode.Q)) {
-			
+			save_load.switchh = true;
 			GameObjectManager.loadScene("cell_city");
 
 			//GameObjectManager.loadScene ("cell_city");

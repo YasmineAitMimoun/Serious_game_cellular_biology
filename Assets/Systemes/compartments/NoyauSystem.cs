@@ -14,6 +14,11 @@ public class NoyauSystem : FSystem {
 	protected override void onResume(int currentFrame){
 	}
 
+	public void cell_city(){
+		save_load.switchh = true;
+		GameObjectManager.loadScene ("cell_city");
+	}
+
 	// Use to process your families.
 	protected override void onProcess(int familiesUpdateCount) {
 		foreach (GameObject go in _noyau) {
@@ -21,6 +26,7 @@ public class NoyauSystem : FSystem {
 			mito.transform.Rotate (new Vector3 (50f, 0f, 0f) * Time.deltaTime);
 		}
 		if (Input.GetKey (KeyCode.Q)) {
+			save_load.switchh = true;
 			GameObjectManager.loadScene ("cell_city");
 		} 
 	}

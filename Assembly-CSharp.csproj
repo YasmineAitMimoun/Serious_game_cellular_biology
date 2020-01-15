@@ -52,62 +52,167 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\AutomaticScript\Atp_system_wrapper.cs" />
+     <Compile Include="Assets\AutomaticScript\CytosineSystem_wrapper.cs" />
+     <Compile Include="Assets\AutomaticScript\Dechetsystem_wrapper.cs" />
+     <Compile Include="Assets\AutomaticScript\DialogSystem_wrapper.cs" />
+     <Compile Include="Assets\AutomaticScript\GameOver_wrapper.cs" />
      <Compile Include="Assets\AutomaticScript\GolgicellSystem_wrapper.cs" />
+     <Compile Include="Assets\AutomaticScript\GolgiSystem_wrapper.cs" />
      <Compile Include="Assets\AutomaticScript\InventorySystem_wrapper.cs" />
+     <Compile Include="Assets\AutomaticScript\Lysosomecellsystem_wrapper.cs" />
+     <Compile Include="Assets\AutomaticScript\LysosomeSystem_wrapper.cs" />
+     <Compile Include="Assets\AutomaticScript\MainMenuSysteme_wrapper.cs" />
+     <Compile Include="Assets\AutomaticScript\membranesystem_wrapper.cs" />
+     <Compile Include="Assets\AutomaticScript\membranesystemcomp_wrapper.cs" />
      <Compile Include="Assets\AutomaticScript\mitochondrioncellSystem_wrapper.cs" />
+     <Compile Include="Assets\AutomaticScript\mitochondrionsystem_wrapper.cs" />
+     <Compile Include="Assets\AutomaticScript\Noyaucellsystem_wrapper.cs" />
+     <Compile Include="Assets\AutomaticScript\NoyauSystem_wrapper.cs" />
      <Compile Include="Assets\AutomaticScript\OxygeneFactorySystem_wrapper.cs" />
      <Compile Include="Assets\AutomaticScript\OxygeneSystem_wrapper.cs" />
+     <Compile Include="Assets\AutomaticScript\RectiliumCellsystem_wrapper.cs" />
+     <Compile Include="Assets\AutomaticScript\RectiliumSystem_wrapper.cs" />
+     <Compile Include="Assets\AutomaticScript\RibosomeSystem_wrapper.cs" />
      <Compile Include="Assets\AutomaticScript\RibosomeSystemecell_wrapper.cs" />
      <Compile Include="Assets\AutomaticScript\SucreSysteme_wrapper.cs" />
      <Compile Include="Assets\AutomaticScript\SugarFactorycell_wrapper.cs" />
      <Compile Include="Assets\AutomaticScript\UpdateOxygeneSystem_wrapper.cs" />
+     <Compile Include="Assets\AutomaticScript\updatescore_wrapper.cs" />
      <Compile Include="Assets\AutomaticScript\UpdateScoreSystem_wrapper.cs" />
      <Compile Include="Assets\BiologyCellsPack\Demo\Scripts\BtnEvents.cs" />
      <Compile Include="Assets\BiologyCellsPack\Demo\Scripts\ChangeRenderQueue.cs" />
      <Compile Include="Assets\BiologyCellsPack\Demo\Scripts\MouseOrbitSample.cs" />
      <Compile Include="Assets\Components\cell\ATP.cs" />
      <Compile Include="Assets\Components\cell\Cell.cs" />
+     <Compile Include="Assets\Components\cell\Dialog.cs" />
      <Compile Include="Assets\Components\cell\Factory_oxygene.cs" />
      <Compile Include="Assets\Components\cell\Factory_sugar.cs" />
+     <Compile Include="Assets\Components\cell\Glucose.cs" />
      <Compile Include="Assets\Components\cell\Golgicell.cs" />
      <Compile Include="Assets\Components\cell\Inventory.cs" />
+     <Compile Include="Assets\Components\cell\membrane.cs" />
      <Compile Include="Assets\Components\cell\Message.cs" />
      <Compile Include="Assets\Components\cell\mitochondrioncell.cs" />
-     <Compile Include="Assets\Components\cell\Oxygène.cs" />
+     <Compile Include="Assets\Components\cell\over.cs" />
      <Compile Include="Assets\Components\cell\Ribosomecell.cs" />
+     <Compile Include="Assets\Components\cell\Save_load.cs" />
+     <Compile Include="Assets\Components\cell\score_dechets.cs" />
      <Compile Include="Assets\Components\cell\score_oxygene.cs" />
+     <Compile Include="Assets\Components\cell\score_proteine.cs" />
      <Compile Include="Assets\Components\cell\Score_sucre.cs" />
+     <Compile Include="Assets\Components\cell\scoreARN.cs" />
      <Compile Include="Assets\Components\cell\Sucre.cs" />
+     <Compile Include="Assets\Components\cell\SugarJSON.cs" />
+     <Compile Include="Assets\Components\compartments\Cytosine.cs" />
      <Compile Include="Assets\Components\compartments\Golgi.cs" />
      <Compile Include="Assets\Components\compartments\Lysosome.cs" />
      <Compile Include="Assets\Components\compartments\mitochondrion.cs" />
      <Compile Include="Assets\Components\compartments\Noyau.cs" />
      <Compile Include="Assets\Components\compartments\Rectilium.cs" />
      <Compile Include="Assets\Components\compartments\ribosome.cs" />
+     <Compile Include="Assets\Components\compartments\transcriptioncomp.cs" />
      <Compile Include="Assets\Components\mainmenu\Play.cs" />
      <Compile Include="Assets\Systemes\Cell\Atp_system.cs" />
+     <Compile Include="Assets\Systemes\Cell\Dechetsystem.cs" />
+     <Compile Include="Assets\Systemes\Cell\DialogSystem.cs" />
+     <Compile Include="Assets\Systemes\Cell\GameOver.cs" />
      <Compile Include="Assets\Systemes\Cell\GolgicellSystem.cs" />
      <Compile Include="Assets\Systemes\Cell\InventorySystem.cs" />
+     <Compile Include="Assets\Systemes\Cell\Lysosomecellsystem.cs" />
+     <Compile Include="Assets\Systemes\Cell\membranesystem.cs" />
      <Compile Include="Assets\Systemes\Cell\mitochondrioncellSystem.cs" />
+     <Compile Include="Assets\Systemes\Cell\Noyaucellsystem.cs" />
      <Compile Include="Assets\Systemes\Cell\OxygeneFactorySystem.cs" />
-     <Compile Include="Assets\Systemes\Cell\OxygeneSystem.cs" />
+     <Compile Include="Assets\Systemes\Cell\RectiliumCellsystem.cs" />
      <Compile Include="Assets\Systemes\Cell\RibosomeSystemecell.cs" />
+     <Compile Include="Assets\Systemes\Cell\save_load.cs" />
+     <Compile Include="Assets\Systemes\Cell\SimpleJSON.cs" />
      <Compile Include="Assets\Systemes\Cell\SucreSysteme.cs" />
      <Compile Include="Assets\Systemes\Cell\SugarFactorySystem.cs" />
-     <Compile Include="Assets\Systemes\Cell\UpdateOxygeneSystem.cs" />
-     <Compile Include="Assets\Systemes\Cell\UpdateScoreSystem.cs" />
+     <Compile Include="Assets\Systemes\Cell\updatescore.cs" />
+     <Compile Include="Assets\Systemes\compartments\CytosineSystem.cs" />
      <Compile Include="Assets\Systemes\compartments\GolgiSystem.cs" />
      <Compile Include="Assets\Systemes\compartments\LysosomeSystem.cs" />
+     <Compile Include="Assets\Systemes\compartments\membranesystemcomp.cs" />
      <Compile Include="Assets\Systemes\compartments\mitochondrionsystem.cs" />
      <Compile Include="Assets\Systemes\compartments\NoyauSystem.cs" />
      <Compile Include="Assets\Systemes\compartments\RectiliumSystem.cs" />
      <Compile Include="Assets\Systemes\compartments\RibosomeSystem.cs" />
+     <Compile Include="Assets\Systemes\compartments\transcriptionfyfy.cs" />
      <Compile Include="Assets\Systemes\Mainmenu\MainMenuSysteme.cs" />
+     <Compile Include="Assets\Systemes\transcription\Adeninesys.cs" />
+     <Compile Include="Assets\Systemes\transcription\controlergame.cs" />
+     <Compile Include="Assets\Systemes\transcription\Cytosinesys.cs" />
+     <Compile Include="Assets\Systemes\transcription\Guaninesys.cs" />
+     <Compile Include="Assets\Systemes\transcription\Guaninesys2.cs" />
+     <Compile Include="Assets\Systemes\transcription\Thyminesys.cs" />
+     <Compile Include="Assets\Systemes\transcription\transcription.cs" />
+     <Compile Include="Assets\Systemes\transcription\Uracilesys.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+     <Compile Include="Assets\TurnTheGameOn\Arrow WayPointer\Demo Scene\Scripts\CharacterControllerThirdPerson.cs" />
+     <Compile Include="Assets\TurnTheGameOn\Arrow WayPointer\Demo Scene\Scripts\SmoothFollow.cs" />
+     <Compile Include="Assets\TurnTheGameOn\Arrow WayPointer\Demo Scene\Scripts\UserControlThirdPerson.cs" />
+     <None Include="Assets\Librairies\Monitoring_Inspector.xml" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\Librairies\FYFY.xml" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
      <None Include="Assets\Librairies\FYFY_Inspector.xml" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\Librairies\FYFY.xml.xml" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
+     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald Bold - OFL.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
+     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\NotoSans - License.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\LiberationSans - OFL.txt" />
      <None Include="Assets\Librairies\CollisionManager.xml" />
+     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
+     <None Include="Assets\Librairies\Monitoring.xml" />
      <None Include="Assets\Librairies\TriggerManager.xml" />
+     <None Include="Assets\TurnTheGameOn\Arrow WayPointer\Read Me.txt" />
      <None Include="Assets\Librairies\PointerManager.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
@@ -139,11 +244,23 @@
  <Reference Include="FYFY_Inspector">
  <HintPath>C:/Users/Souad/Documents/ISG/cellcity/Assets/Librairies/FYFY_Inspector.dll</HintPath>
  </Reference>
+ <Reference Include="Monitoring">
+ <HintPath>C:/Users/Souad/Documents/ISG/cellcity/Assets/Librairies/Monitoring.dll</HintPath>
+ </Reference>
+ <Reference Include="Monitoring_Inspector">
+ <HintPath>C:/Users/Souad/Documents/ISG/cellcity/Assets/Librairies/Monitoring_Inspector.dll</HintPath>
+ </Reference>
  <Reference Include="PointerManager">
  <HintPath>C:/Users/Souad/Documents/ISG/cellcity/Assets/Librairies/PointerManager.dll</HintPath>
  </Reference>
  <Reference Include="TriggerManager">
  <HintPath>C:/Users/Souad/Documents/ISG/cellcity/Assets/Librairies/TriggerManager.dll</HintPath>
+ </Reference>
+ <Reference Include="TextMeshPro-2017.1-Editor">
+ <HintPath>C:/Users/Souad/Documents/ISG/cellcity/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.1-Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="TextMeshPro-2017.1-Runtime">
+ <HintPath>C:/Users/Souad/Documents/ISG/cellcity/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.1-Runtime.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

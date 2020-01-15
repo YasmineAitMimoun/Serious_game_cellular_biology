@@ -20,3 +20,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Golgi.unity
     guid: 5ef3167bb67de944ea6128f30b18d21d
+  - enabled: 1
+    path: Assets/Scenes/Noyau.unity
+    guid: 23007fa6a8b4bef48a2b9e0d3c5410dc
+  - enabled: 1
+    path: Assets/Scenes/Recticulum.unity
+    guid: fa5834cb8326a2e4fa1d009a16ed7dab
+  - enabled: 1
+    path: Assets/Scenes/Transcription de L'ADN.unity
+    guid: 0704af08a2bf216469e2f526988edbff
+  - enabled: 1
+    path: Assets/Scenes/Lysosome.unity
+    guid: 01ea14ff228a9fa4faa08f0c6f068678
+  - enabled: 1
+    path: Assets/Scenes/membraneplasmique.unity
+    guid: 668cbaee15d5de547ac16f19d8162fd1

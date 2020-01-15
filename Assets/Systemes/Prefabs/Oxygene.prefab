@@ -90,13 +90,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1276061943107188}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c46f80f5eb544ab49ab7f41eaabfbbe1, type: 3}
+  m_Script: {fileID: 11500000, guid: b40447919d62d5345be18bd9fe62463a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {x: 0, y: 0, z: 0}
-  arrive: 0
-  speed: 50
-  pressed: 0
+  reloadTime: 5
+  reloadProgress: 0
+  prefab: {fileID: 0}
 --- !u!135 &135486485522541566
 SphereCollider:
   m_ObjectHideFlags: 1

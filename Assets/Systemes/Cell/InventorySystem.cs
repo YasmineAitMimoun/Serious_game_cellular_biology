@@ -20,7 +20,7 @@ public class InventorySystem : FSystem {
 			Inventory inventory = inv.GetComponent<Inventory> ();
 			if (Input.GetKey (KeyCode.I) && Time.time-inventory.pressed_time > 0.5f) {
 				inventory.activation = !inventory.activation;
-				GameObject Invent = GameObject.Find ("Inventaire");
+				GameObject Invent = inventory.inventaire;
 				Invent.GetComponent<Canvas> ().enabled = inventory.activation;
 				inventory.pressed_time = Time.time;
 			} 

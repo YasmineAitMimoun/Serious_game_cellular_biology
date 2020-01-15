@@ -14,14 +14,17 @@ public class LysosomeSystem : FSystem {
 	protected override void onResume(int currentFrame){
 	}
 
+	public void cell_city(){
+		save_load.switchh = true;
+		GameObjectManager.loadScene ("cell_city");
+	}
+
 	// Use to process your families.
 	protected override void onProcess(int familiesUpdateCount) {
 		foreach (GameObject go in _Lysosome) {
 			Lysosome mito = go.GetComponent<Lysosome> ();
 			mito.transform.Rotate (new Vector3 (0f, -50f, 0f) * Time.deltaTime);
 		}
-		if (Input.GetKey (KeyCode.Q)) {
-			GameObjectManager.loadScene ("cell_city");
-		} 
+
 	}
 }
