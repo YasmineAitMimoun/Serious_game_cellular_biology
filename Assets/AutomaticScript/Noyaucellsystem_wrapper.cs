@@ -14,6 +14,11 @@ public class Noyaucellsystem_wrapper : MonoBehaviour
 		MainLoop.callAppropriateSystemMethod ("Noyaucellsystem", "description", null);
 	}
 
+	public void Replication()
+	{
+		MainLoop.callAppropriateSystemMethod ("Noyaucellsystem", "Replication", null);
+	}
+
 	public void transcription()
 	{
 		MainLoop.callAppropriateSystemMethod ("Noyaucellsystem", "transcription", null);

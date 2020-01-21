@@ -7,6 +7,6 @@ public class ATP : MonoBehaviour {
 	public static float time = 0;
 	public float seuiltime = 120f;
 	public GameObject ui;
-	public static int score = 2;
+	public static int score = 30;
 
 }

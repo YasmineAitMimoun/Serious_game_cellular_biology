@@ -12,17 +12,29 @@ public class Noyaucellsystem : FSystem {
 		save_load.switchh = false;
 		GameObjectManager.loadScene ("Noyau");
 	}
-
+	public void Replication(){
+		if (niveau.score > 1) {
+			if (ATP.score >= 10 && Score_ADN.prodlysosome == true && Score_ADN.replicationmito == true) {
+				Score_ADN.score += 1;
+				Score_ADN.update = true;	
+				ATP.score -= 10;
+			} else {
+				Debug.Log ("Vous n'avez pas assez d'energie !");
+			}
+		} else
+			Debug.Log ("Votre niveau est insuffisant pour effectuer cette action ");
+	}
 	public void transcription(){
-		if (ATP.score < 0)
-			Debug.Log ("Pas assez d'energie pour effectuer cette action");
+		if (ATP.score < 10)
+			Debug.Log ("Pas assez d'énergie pour effectuer cette action");
 		else {
-			Save_load.save (_sucre);
-			save_load.switchh = false;
+			
 			if (transcriptioncomp.first == true) {
+				Save_load.save (_sucre);
+				save_load.switchh = false;
 				score_dechets.score += 1;
 				score_dechets.update = true;
-				ATP.score = ATP.score - 1;
+				ATP.score = ATP.score - 10;
 				transcriptioncomp.first = false;
 				GameObjectManager.loadScene ("Transcription de l'ADN");
 			} else

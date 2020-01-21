@@ -27,6 +27,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Recticulum.unity
     guid: fa5834cb8326a2e4fa1d009a16ed7dab
   - enabled: 1
+    path: Assets/Scenes/Dechets.unity
+    guid: d53be5abfba5fa946bfba6be098b75ea
+  - enabled: 1
+    path: Assets/Scenes/Finalscene.unity
+    guid: 2b9efeaf95cb73f46bcebcfa428e77ce
+  - enabled: 1
     path: Assets/Scenes/Transcription de L'ADN.unity
     guid: 0704af08a2bf216469e2f526988edbff
   - enabled: 1

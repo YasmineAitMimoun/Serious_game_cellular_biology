@@ -14,4 +14,14 @@ public class Lysosomecellsystem_wrapper : MonoBehaviour
 		MainLoop.callAppropriateSystemMethod ("Lysosomecellsystem", "cell_city", null);
 	}
 
+	public void description()
+	{
+		MainLoop.callAppropriateSystemMethod ("Lysosomecellsystem", "description", null);
+	}
+
+	public void Digestion()
+	{
+		MainLoop.callAppropriateSystemMethod ("Lysosomecellsystem", "Digestion", null);
+	}
+
 }

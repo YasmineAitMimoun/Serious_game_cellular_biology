@@ -72,8 +72,6 @@ public class Save_load : FSystem {
 		}
 		bool show = list_suc ["show"];
 		Dialog.show = show;
-		Debug.Log (show);
-		Debug.Log ("dizzzaaaan");
 		scoreARN.update = true;
 		score_proteine.update = true;
 		score_dechets.update = true;

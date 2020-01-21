@@ -14,10 +14,10 @@ public class RibosomeSystemecell : FSystem {
 		GameObjectManager.loadScene ("ribosome");
 	}
 	public void Synthèse(){
-		if (ATP.score > 0 && scoreARN.score >0) {
+		if (ATP.score >= 10 && scoreARN.score >0) {
 			score_dechets.score += 1;
 			score_dechets.update = true;
-			ATP.score = ATP.score - 1;
+			ATP.score = ATP.score - 10;
 			score_proteine.score = score_proteine.score + 1;
 			Debug.Log (score_proteine.score);
 			score_proteine.update = true;

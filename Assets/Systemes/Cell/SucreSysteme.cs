@@ -65,7 +65,7 @@ public class SucreSysteme : FSystem {
 
 			}
 			if(rt.pressed == true)	{
-				if (ATP.score < 1) {
+				if (ATP.score < 10) {
 					//GameObject.Find ("textmessage").GetComponent<Text> ().text = "Pas assez d'énergie pour effectuer cette action";
 					Debug.Log ("Pas assez d'énergie pour effectuer cette action"); 
 				} else {
@@ -76,7 +76,7 @@ public class SucreSysteme : FSystem {
 						score_dechets.update = true;
 						Score_sucre.score =Score_sucre.score + 1;
 						Score_sucre.update = true;
-						ATP.score = ATP.score - 1;
+						ATP.score = ATP.score - 10;
 						GameObjectManager.unbind (sucre);
 						UnityEngine.Object.Destroy (sucre);
 					}

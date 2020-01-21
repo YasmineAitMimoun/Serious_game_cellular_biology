@@ -46,5 +46,22 @@ public class updatescore : FSystem {
 			GameObject.Find ("scoredech").GetComponent<Text> ().text = "Déchets: "+ score_dechets.score ;
 			score_dechets.update = false;
 		}
+		if (niveau.update == true) {
+			if (GameObject.Find ("niveau").GetComponent<Text> () == null)
+				Debug.Log ("objet non trouvé");
+			if (niveau.score == 1) {
+				GameObject.Find ("niveau").GetComponent<Text> ().text = "Niveau: phase G1";
+			}
+			if (niveau.score == 2) {
+				GameObject.Find ("niveau").GetComponent<Text> ().text = "Niveau: phases S et G2";
+			}
+			niveau.update = false;
+		}
+	
+		if (Score_ADN.update == true) {
+			if (GameObject.Find ("scoreadn").GetComponent<Text> () == null)
+				Debug.Log ("objet non trouvé");
+			GameObject.Find ("scoreadn").GetComponent<Text> ().text = "ADN: "+ Score_ADN.score ;
+		}
 	}
 }

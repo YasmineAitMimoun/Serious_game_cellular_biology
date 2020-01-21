@@ -55,7 +55,9 @@
      <Compile Include="Assets\AutomaticScript\CytosineSystem_wrapper.cs" />
      <Compile Include="Assets\AutomaticScript\Dechetsystem_wrapper.cs" />
      <Compile Include="Assets\AutomaticScript\DialogSystem_wrapper.cs" />
+     <Compile Include="Assets\AutomaticScript\FactoryDechets_wrapper.cs" />
      <Compile Include="Assets\AutomaticScript\GameOver_wrapper.cs" />
+     <Compile Include="Assets\AutomaticScript\Gestiontime_wrapper.cs" />
      <Compile Include="Assets\AutomaticScript\GolgicellSystem_wrapper.cs" />
      <Compile Include="Assets\AutomaticScript\GolgiSystem_wrapper.cs" />
      <Compile Include="Assets\AutomaticScript\InventorySystem_wrapper.cs" />
@@ -93,9 +95,11 @@
      <Compile Include="Assets\Components\cell\membrane.cs" />
      <Compile Include="Assets\Components\cell\Message.cs" />
      <Compile Include="Assets\Components\cell\mitochondrioncell.cs" />
+     <Compile Include="Assets\Components\cell\niveau.cs" />
      <Compile Include="Assets\Components\cell\over.cs" />
      <Compile Include="Assets\Components\cell\Ribosomecell.cs" />
      <Compile Include="Assets\Components\cell\Save_load.cs" />
+     <Compile Include="Assets\Components\cell\Score_ADN.cs" />
      <Compile Include="Assets\Components\cell\score_dechets.cs" />
      <Compile Include="Assets\Components\cell\score_oxygene.cs" />
      <Compile Include="Assets\Components\cell\score_proteine.cs" />
@@ -103,7 +107,10 @@
      <Compile Include="Assets\Components\cell\scoreARN.cs" />
      <Compile Include="Assets\Components\cell\Sucre.cs" />
      <Compile Include="Assets\Components\cell\SugarJSON.cs" />
+     <Compile Include="Assets\Components\compartments\Button.cs" />
      <Compile Include="Assets\Components\compartments\Cytosine.cs" />
+     <Compile Include="Assets\Components\compartments\Déchet.cs" />
+     <Compile Include="Assets\Components\compartments\Gestiontime.cs" />
      <Compile Include="Assets\Components\compartments\Golgi.cs" />
      <Compile Include="Assets\Components\compartments\Lysosome.cs" />
      <Compile Include="Assets\Components\compartments\mitochondrion.cs" />
@@ -113,7 +120,6 @@
      <Compile Include="Assets\Components\compartments\transcriptioncomp.cs" />
      <Compile Include="Assets\Components\mainmenu\Play.cs" />
      <Compile Include="Assets\Systemes\Cell\Atp_system.cs" />
-     <Compile Include="Assets\Systemes\Cell\Dechetsystem.cs" />
      <Compile Include="Assets\Systemes\Cell\DialogSystem.cs" />
      <Compile Include="Assets\Systemes\Cell\GameOver.cs" />
      <Compile Include="Assets\Systemes\Cell\GolgicellSystem.cs" />
@@ -131,6 +137,8 @@
      <Compile Include="Assets\Systemes\Cell\SugarFactorySystem.cs" />
      <Compile Include="Assets\Systemes\Cell\updatescore.cs" />
      <Compile Include="Assets\Systemes\compartments\CytosineSystem.cs" />
+     <Compile Include="Assets\Systemes\compartments\Dechetsystem.cs" />
+     <Compile Include="Assets\Systemes\compartments\FactoryDechets.cs" />
      <Compile Include="Assets\Systemes\compartments\GolgiSystem.cs" />
      <Compile Include="Assets\Systemes\compartments\LysosomeSystem.cs" />
      <Compile Include="Assets\Systemes\compartments\membranesystemcomp.cs" />

@@ -20,7 +20,7 @@ public class Atp_system : FSystem {
 
 	// Use to process your families.
 	protected override void onProcess(int familiesUpdateCount) {
-		if (ATP.first == false && ATP.score == 1 && Score_sucre.score == 0) {
+		if (ATP.first == false && ATP.score == 10 && Score_sucre.score == 0) {
 			_ATP.First ().GetComponent<ATP> ().ui.SetActive (true);
 			ATP.time += Time.deltaTime;
 			if (ATP.time >= _ATP.First ().GetComponent<ATP> ().seuiltime)

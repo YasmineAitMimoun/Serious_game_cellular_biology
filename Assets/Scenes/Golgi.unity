@@ -443,8 +443,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4, y: 113}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: 100.3}
+  m_SizeDelta: {x: 160.74, y: 55.59}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1308454151
 MonoBehaviour:
@@ -478,7 +478,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Appareil de Golgi
+  m_Text: L'appareil de Golgi, la poste de Cell City
 --- !u!222 &1308454152
 CanvasRenderer:
   m_ObjectHideFlags: 0

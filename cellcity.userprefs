@@ -1,18 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Components\cell\score_dechets.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Systemes\transcription\controlergame.cs">
     <Files>
-      <File FileName="Assets\Systemes\Cell\Atp_system.cs" Line="26" Column="65" />
-      <File FileName="Assets\Systemes\Cell\GameOver.cs" Line="50" Column="4" />
-      <File FileName="Assets\Components\compartments\transcriptioncomp.cs" Line="4" Column="26" />
-      <File FileName="Assets\Systemes\Cell\updatescore.cs" Line="33" Column="88" />
-      <File FileName="Assets\Systemes\transcription\controlergame.cs" Line="1" Column="1" />
-      <File FileName="Assets\Systemes\Cell\save_load.cs" Line="79" Column="31" />
-      <File FileName="Assets\Systemes\Cell\Noyaucellsystem.cs" Line="24" Column="33" />
-      <File FileName="Assets\Systemes\Cell\SucreSysteme.cs" Line="76" Column="35" />
-      <File FileName="Assets\Systemes\Cell\mitochondrioncellSystem.cs" Line="14" Column="26" />
-      <File FileName="Assets\Systemes\Cell\Dechetsystem.cs" Line="24" Column="8" />
-      <File FileName="Assets\Components\cell\score_dechets.cs" Line="5" Column="23" />
+      <File FileName="Assets\Components\compartments\Déchet.cs" Line="1" Column="1" />
+      <File FileName="Assets\Systemes\Cell\GameOver.cs" Line="1" Column="1" />
+      <File FileName="Assets\Systemes\Cell\Lysosomecellsystem.cs" Line="1" Column="1" />
+      <File FileName="Assets\Components\cell\over.cs" Line="1" Column="1" />
+      <File FileName="Assets\Systemes\Cell\updatescore.cs" Line="1" Column="1" />
+      <File FileName="Assets\Systemes\transcription\controlergame.cs" Line="16" Column="21" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
